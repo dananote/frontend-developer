@@ -1,0 +1,109 @@
+body {
+    background-image: url(./images/background02.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1, h2, p, ul {
+    margin: initial;
+    padding: initial;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    background-color: #ebebeb;
+    width: 800px;
+    margin: 40px auto;
+}
+
+.header {
+    background-image: url(./images/cover04.png);
+    color:white;
+    padding: 50px 0;
+    background-size: cover;
+    text-align: center;
+}
+
+
+.header img.profile {
+    border: 8px solid white;
+    width: 150px;
+    border-radius: 0 40px 40px 0;
+}
+
+
+
+.header h1 {
+    border-bottom: 4px solid;
+    width: 200px;
+    margin: 30px auto;
+}
+
+.section {
+    background-color: white;
+    margin: 30px;
+    padding: 30px;
+    background-image: url(./images/icon-information.png);
+    background-repeat: no-repeat;
+    background-position: right 40px center;
+}
+
+.section:nth-child(2) {
+    background-image: url(./images/icon-skills.png);
+}
+
+.section {
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #ff5266;
+    margin-bottom: 20px;
+}
+
+/* h1, p {
+    box-shadow: inset 0 0 10px rgb(0, 255, 255);
+} */
+/* h1은 그냥 블록레벨요소라 whidh: auto를 차지하고 있을 뿐 가운데 정렬이된것이 아니다 
+가운데 정렬된것은 h1의 텍스트이다. */
+
+.section li {
+    color: #6d6d6d;
+    line-height: 1.5;
+    padding-left: 20px;
+    border-left: 6px solid #e0e0e0;
+}
+
+.footer {
+    background-color: #ffffff;
+}
+
+.list-wrap {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.list-wrap li {
+
+    display: inline-block;
+    border: 2px solid #ddd;
+    padding: 8px 24px;
+    border-radius: 50px;
+    color: #ddd;
+}
+
+.list-wrap li a {
+    color:#d0d0d0;
+}
