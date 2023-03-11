@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    background-color: salmon;
+    height: 50px;
+}
+
+article {
+    display: flex;
+    height: 200px;
+    margin: 10px 0;
+}
+
+section {
+    flex: 2 1 auto;
+    background-color: rgb(63, 67, 114);
+}
+
+aside {
+    flex: 1 1 auto;
+    background-color: rgb(171, 228, 85);
+    margin-left: 10px;
+}
+
+footer {
+    background-color: skyblue;
+    height: 50px
+}
