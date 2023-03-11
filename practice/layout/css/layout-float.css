@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: salmon;
+}
+
+header, footer {
+    height: 50px;
+}
+
+article section,aside {
+    float: left;
+    height: 200px;
+    margin: 8px 0;
+}
+
+article::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section {
+    background-color: rgb(47, 54, 107);
+    width: 70%;
+}
+
+aside {
+    background-color: rgb(184, 239, 73);
+    width: calc(30% - 10px);
+    margin-left: 10px;
+}
+
+footer {
+    background-color: skyblue;
+}
