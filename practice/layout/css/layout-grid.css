@@ -1,0 +1,41 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding:0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas:
+        'a a'
+        'b c'
+        'd d'
+}
+
+body * {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+header {
+    grid-area: a;
+    background-color: salmon;
+}
+
+section {
+    grid-area: b;
+    background-color: rgb(56, 57, 109);
+}
+
+aside {
+    grid-area: c;
+    background-color: rgb(159, 250, 114);
+}
+
+footer {
+    grid-area: d;
+    background-color: rgb(114, 198, 250);
+}
+
+
+
