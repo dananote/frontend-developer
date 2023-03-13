@@ -42,27 +42,6 @@ h2,p {
     overflow: hidden;
 }
 
-.profile {
-    height: 50px;
-    display: flex;
-    padding: 1rem;
-    background-color: aqua;
-}
-
-.text-wrap {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-    background-color: red;
-
-}
-
-.text-wrap h2 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 
 .card-img {
     width: 100%;

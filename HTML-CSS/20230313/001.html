@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button, 가상 동작 선태자, transition</title>
+    <style>
+
+        [class^="btn"] {
+            width: 88px;
+            height: 32px;
+            margin: 10px;
+            background: #2D3848;
+            border: 1px solid #1A202C;
+            box-shadow: inset 1px 1px #4A5568;
+            color: #CBD5DF;
+        }
+
+        [class^="btn"]:hover {
+            text-decoration: underline;
+            color:white;
+            transition: all ease 1s 1s;
+            /* transition: color 3s, background-color 1s; */
+        }
+
+
+        [class$="positive"] {
+            color: #439AFF;
+        }
+
+        [class$="negative"] {
+            color: #EB5757;
+        }
+
+
+        .btn-positive:hover {
+            background-color: #439AFF;
+            border: 1px solid #439AFF;
+            box-shadow: inset 1px 1px #73B4FF;
+        }
+
+        .btn-negative:hover {
+            background-color: #EB5757;
+            border: 1px solid #EB5757;
+            box-shadow: inset 1px 1px #FD6F6F;
+        }
+
+        .btn:active {
+            box-shadow: inset 1px 1px #261F3E;
+            text-decoration: underline;
+        }
+
+        .btn-positive:active {
+            box-shadow: inset 1px 1px #3B78BE;
+        }
+
+        .btn-negative:active {
+            box-shadow: inset 1px 1px #D94242;
+        }
+
+
+        .btn:disabled {
+            box-shadow: none;
+            color: #4A5568;
+            background-color: #3A4556;
+            border: 1px solid #343E4E;
+            text-decoration: none;
+        }
+
+        [class^="btn"]:focus {
+            outline: none;
+            border: 1px solid #439AFF;
+        }
+
+    
+
+
+    </style>
+  </head>
+  <body>
+
+    <button class="btn" type="button">Button</button>
+    <button class="btn-positive" type="button">Yes</button>
+    <button class="btn-negative" type="button">No</button>
+    <button class="btn" type="button" disabled>Button</button>
+    <p class="message-positive">가입가능합니다.</p>
+    <p class="message-negative">error 메시지</p>
+  </body>
+</html>
