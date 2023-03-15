@@ -1,0 +1,52 @@
+/* Reset */
+
+h1, p {
+    margin: initial;
+    /* padding: initial; */
+}
+body {
+    background-image: url(../images/bg.png);
+    
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* Layout */
+
+.wrapper {
+    width: 40%;
+    margin: 100px auto;
+}
+
+
+/* Component */
+
+.card-cover {
+    display: block;
+    margin: 0 auto;
+}
+
+.card-contents {
+    border-radius: 10px 10px 30px 30px;
+    background-color: #93572E;
+    color: white;
+    padding: 60px 20px 40px 20px;
+    background-image: url(../images/green.png);
+    background-repeat:repeat-x;
+    border-bottom: 10px solid #4a260b;
+    box-shadow: inset 0 0 10px rgb(37, 19, 5);
+}
+
+.card-contents h1 {
+    margin-bottom: 10px;
+}
+
+.card-contents p {
+    color:#D2BAAD;
+    line-height: 1.5;
+    margin-bottom: 1.2em;
+}
