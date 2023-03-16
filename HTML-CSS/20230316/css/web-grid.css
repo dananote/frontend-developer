@@ -1,0 +1,202 @@
+/* 레이아웃 */
+
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    " a b "
+    " a c ";
+}
+
+.grid-a {
+    grid-area: a;
+}
+
+.grid-b {
+    grid-area: b;
+}
+
+.grid-c {
+    grid-area: c;
+}
+
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 스타일 */
+
+.container {
+    width: 1200px;
+    max-width: calc(100% - 60px);
+    min-width: 400px;
+}
+
+.grid-a h1 {
+    color: #121314;
+    font-weight: normal;
+
+    /* 변동값 70 70 36 */
+    font-size: 70px;
+}
+
+
+.grid-a p {
+    color: #47494d;
+
+    /* 변동값 20 20 14 */
+    font-size: 20px;
+
+    /* 변동값 20 20 14 */
+    margin-top: 20px;
+}
+
+
+.grid-b,
+.grid-c {
+    border-radius: 20px;
+    color: white;
+
+    /* 변동값 
+        40 30 30 40
+        30 20 20 30 
+        30 20 20 30
+    */
+    padding: 40px 30px 30px 40px;
+    aspect-ratio: 2 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-b {
+    background: url(../images/background1.jpg) no-repeat 0 0 /cover;
+}
+
+.grid-c {
+    background: url(../images/background2.jpg) no-repeat 0 0 /cover;
+}
+
+.grid-b strong,
+.grid-c strong {
+    /* 변동값 30 24 20 */
+    font-size: 30px;
+}
+
+.grid-b span,
+.grid-c span {
+    /* 변동값 16 16 14 */
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+
+/* 가상요소를 사용한 방법 */
+.go-after::after {
+    content: '';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border: 1px solid #fff;
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+    margin-left: 0.2em;
+}
+
+/* 백그라운드를 사용한 방법 */
+
+.go-bg {
+    background: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 1.2em;
+}
+
+/* 미디어쿼리 */
+
+@media (max-width: 1200px) {
+    .container {
+        grid-template-areas:
+        " a a "
+        " b c ";
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .grid-a {
+        margin-bottom: 60px;
+    }
+
+    .grid-b,
+    .grid-c {
+        padding: 30px 20px 20px 30px; 
+    }
+
+    .grid-b strong,
+    .grid-c strong {
+        font-size: 24px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+        " a "
+        " b "
+        " c ";
+        gap: 14px;
+    }
+
+    .grid-a {
+        margin-bottom: 40px;
+    }
+
+    .grid-a h1 {
+        font-size: 36px;
+    }
+
+    .grid-a p {
+        font-size: 14px;
+    }
+
+    .grid-a p {
+        margin-top: 14px;
+    }
+
+    .grid-b strong,
+    .grid-c strong {
+        font-size: 20px;
+    }
+
+    .grid-b span,
+    .grid-c span {
+        font-size: 14px;
+    }
+
+}
+
+
+@media (min-height: 820px) {
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  @media (max-height: 819px) {
+    .container {
+      margin: 40px auto;
+    }
+  }
