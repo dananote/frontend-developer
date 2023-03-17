@@ -1,0 +1,169 @@
+:root {
+    font-family: 'Montserrat', sans-serif;
+	/*
+	font-weight: 500;
+	font-weight: 700;
+	*/
+}
+
+/* reset */
+body {
+	margin: 0;
+}
+
+h1,
+h2,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+li {
+	list-style: none;
+}
+
+
+
+body {
+	background-color: #673399;
+}
+
+.flex-wrapper {
+	width: 1080px;
+	max-width: calc(100% - 60px);
+	margin: 100px auto;
+	display: flex;
+	gap: 24px;
+	flex-direction: column;
+}
+
+.text-wrap {
+	margin-bottom: 76px;
+}
+
+
+[class$="wrap"] {
+	display: flex;
+}
+
+[class$="title"] {
+	flex-basis: 26%;
+}
+
+[class$="content"] {
+	flex-basis: calc(100% - 26%);
+}
+
+.title h1 {
+	color: white;
+	font-size: 40px;
+	white-space: nowrap;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.divide {
+	width: 15%;
+	height: 1px;
+	background-color: #bd8fe8;
+}
+
+.content p {
+	color:#bd8fe8;
+	font-size: 14px;
+	line-height: 1.5;
+	margin-right: 150px;
+}
+
+
+.orange {
+	box-shadow: inset 0 -20px 0 orangered;
+}
+
+.item-title {
+	background: url(./images/photo01.png) no-repeat 0 0 / cover ;
+	position: relative;
+}
+
+.item-wrap:nth-child(3) .item-title {
+	background: url(./images/photo02.png) no-repeat 0 0 / cover ;
+}
+
+.item-wrap:nth-child(4) .item-title {
+	background: url(./images/photo03.png) no-repeat 0 0 / cover ;
+}
+
+
+
+.item-wrap:nth-child(3) {
+	flex-direction: row-reverse;
+}
+
+
+
+.item-title h2 {
+	font-size: 30px;
+	color: white;
+	position: absolute;
+	background-color: #68339990;
+	inset: 0;
+	text-align: center;
+	line-height: 6em;
+}
+
+.item-content {
+	background: white;
+	box-sizing: border-box;
+	padding: 24px;
+}
+
+.item-content p {
+	color:#673399;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 32px;
+}
+
+.item-content li {
+	color:rgb(41, 41, 41);
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.item-content li:last-child {
+	margin-bottom: 0;
+}
+
+
+.item-content li::before {
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #bd8fe8;
+	border-radius: 10px;
+	margin-right: 16px;
+}
+
+@media (max-width: 1200px) {
+	.text-wrap {
+		flex-direction: column;
+	}
+
+	.content {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.divide {
+		margin-top: 24px;
+	}
+
+}
+
