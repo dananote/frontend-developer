@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexing</title>
+        <style>
+            body {
+                background-color: brown;
+            }
+            .playground {
+                border: 10px solid maroon;
+                width: 980px;
+                height: 400px;
+                margin: 0 auto;
+                border-radius: 20px;
+                background-color: skyblue;
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+            }
+
+            .frog {
+                background-color: mediumseagreen;
+                color: lime;
+                font-size: 40px;
+                margin: auto 10px;
+                border: 6px solid green;
+                border-radius: 10px;
+                flex-basis: 200px;
+                /* min-width: 0; */
+                /* min-width: auto; 가 기본값으로 지정되어 있는데 자식의 콘텐츠 넓이 만큼 차지하고 있음 */
+            }
+
+            .frog.sun {
+                margin-bottom: 0;
+                margin-top: auto;
+            }
+
+        /* flex-grow는 남은 장소를 먹는것  */
+
+        </style>
+    </head>
+    <body>
+
+        <div class="playground">
+            <div class="frog"><img src="./images/frog.png"></div>
+            <div class="frog"><img src="./images/frog-dj.png"></div>
+            <div class="frog"><img src="./images/frog-3d.png"></div>
+            <div class="frog sun"><img src="./images/frog-disco.png"></div>
+            <!-- <div class="frog"><img src="./images/frog-eat.png"></div> -->
+            <!-- <div class="frog"><img src="./images/frog-hang.png"></div> -->
+        </div>
+
+    </body>
+</html>
