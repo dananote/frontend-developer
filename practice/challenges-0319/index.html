@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vending machine</title>
+    <link rel="stylesheet" href="./css/style.css"></link>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1 class="logo">
+            <img src="./images/banner.svg" alt="logo">
+        </h1>
+        <div class="flex-wrap">
+            <article class="product-list">
+                <div class="product-wrap">
+
+                    <button class="product selected">
+                        <img src="./images/coke-red.svg" alt="coke-red">
+                        <p>Original_Cola</p>
+                        <div class="price">1000원</div>
+                    </button>
+                    <button class="product" disabled>
+                        <img src="./images/coke-violet.svg" alt="coke-red">
+                        <p>Violet_Cola</p>
+                        <div class="price">1000원</div>
+                    </button>
+                    <button class="product">
+                        <img src="./images/coke-yellow.svg" alt="coke-red">
+                        <p>Yellow_Cola</p>
+                        <div class="price">1000원</div>
+                    </button>
+                    <button class="product">
+                        <img src="./images/coke-cool.svg" alt="coke-red">
+                        <p>Cool_Cola</p>
+                        <div class="price">1000원</div>
+                    </button>
+                    <button class="product selected">
+                        <img src="./images/coke-green.svg" alt="coke-red">
+                        <p>Green_Cola</p>
+                        <div class="price">1000원</div>
+                    </button>
+                    <button class="product">
+                        <img src="./images/coke-orange.svg" alt="coke-red">
+                        <p>Orange_Cola</p>
+                        <div class="price">1000원</div>
+                    </button>
+                </div>
+
+                <div class="product-price">
+                    <div class="return-price">
+                        <p>잔액:</p>
+                        <p>1,000 원</p>
+                    </div>
+                    <button class="price-btn">거스름돈 반환</button>
+                    <input class="deposit-price" type="text" placeholder="입금액 입력">
+                    <button class="
+                    price-btn">입금</button>
+                    <div class="select-product-wrap">
+                        <div class="select-product">
+                            <img src="./images/coke-red.svg" alt="coke-red">
+                            <p>Original_Cola</p>
+                            <div class="select-product-box">1</div>
+                        </div>
+                        <div class="select-product">
+                            <img src="./images/coke-green.svg" alt="coke-green">
+                            <p>Green_Cola</p>
+                            <div class="select-product-box">2</div>
+                        </div>
+                    </div>
+                    <button class="
+                    get-btn">획득</button>
+                </div>
+            </article>
+            <article class="purchase-list">
+                ...
+            </article>
+        </div>
+    </div>
+
+  </body>
+</html>
