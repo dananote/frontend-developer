@@ -48,11 +48,13 @@ h1 {
 .flex-wrap {
     display: flex;
     gap: 28px;
+
 }
 
 .flex-wrap article {
-    background-color:white;
+    /* background-color:white; */
     flex-basis: 100%;
+    min-height:545px;
 }
 
 
@@ -61,6 +63,7 @@ h1 {
 .flex-wrap article:first-child {
     padding: 28px;
     box-sizing: border-box;
+    background-color:white;
 }
 .product-wrap {
     display: grid;
@@ -158,6 +161,7 @@ h1 {
     font-size: 13px;
     font-weight: 500;
     padding: 10px;
+    height: 32px;
 }
 
 .deposit-price {
@@ -222,7 +226,51 @@ h1 {
 
 /* purchase-list */
 .purchase-list {
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase-price {
+    padding: 10px 28px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+
+.purchase-get {
+    background-color: white;
+    padding: 25px 29px;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+.purchase-get h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.purchase-get-item {
+    flex-grow: 1;
+}
+
+.scroll {
+    height: 364px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.get-product-wrap {
+    background-color: #EAE8FE;
+    padding: 12px 18px 12px 12px;
+    height: 600px
+}
+
+.total-price {
+    margin-top: 6px;
+    text-align: right;
+    font-size: 12px;
 }
 
 
@@ -232,6 +280,11 @@ h1 {
     body {
         background-color: white;
     }
+
+    h1 {
+        margin-bottom: 8px;
+    }
+
     .wrapper {
         width: 100%;
     }
@@ -243,5 +296,13 @@ h1 {
     .flex-wrap {
         flex-direction: column;
         gap: 20px
+    }
+
+    .purchase-price {
+        margin-bottom: 0;
+    }
+
+    .purchase-list {
+        margin-top: -30px
     }
 }
