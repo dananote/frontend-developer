@@ -154,6 +154,7 @@ body {
 @media (max-width: 1200px) {
 	.text-wrap {
 		flex-direction: column;
+		margin-bottom: 50px;
 	}
 
 	.content {
@@ -163,6 +164,42 @@ body {
 
 	.divide {
 		margin-top: 24px;
+	}
+
+}
+
+@media (max-width: 800px) {
+	.text-wrap {
+		flex-direction: column;
+		margin-bottom: 40px;
+	}
+
+	.content {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.divide {
+		margin-top: 24px;
+	}
+
+	.item-wrap{
+		flex-direction: column;
+	}
+
+
+	.item-wrap:nth-child(3) {
+		flex-direction: column;
+	}
+
+	.item-title h2 {
+		position: static;
+		font-size: 40px;
+		line-height: 4em;
+	}
+
+	.item-content p {
+		margin-bottom: 20px;
 	}
 
 }
