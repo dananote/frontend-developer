@@ -52,6 +52,8 @@ body {
 
 .divide {
     width: 100%;
+    margin: 0 -24px;
+    /* margin: auto; */
     height: 1px;
     background-color: #C4C4C4;
 }
@@ -74,6 +76,7 @@ body {
 
 .login-wrap input::placeholder {
     color: #767676;
+    font-size: 16px;
 }
 
 .login-wrap input:first-child {
