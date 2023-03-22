@@ -1,33 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="ko-KR">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login-madal</title>
+    <title>login-modal</title>
     <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-    <article class="login-madal">
-        <div class="modal-head">
-            <h1 class="modal-head-title">로그인  또는 회원가입</h1>
-            <button class="btn-close" type="button">
-                <img src="./images/close.svg" alt="닫기 버튼">
-            </button>
+  </head>
+  <body>
+    <article class="login-modal">
+
+        <header class="head">
+            <h1 class="head-title">
+                로그인  또는 회원가입
+            </h1>
+        </header>
+
+        <main class="login">
+            <h3 class="login-title">위니브에서 여러분의 궁금증을 해결하세요! :)</h3>
+            <h2 class="a11y-hidden">
+                인풋창에서 아이디 비밀번호 직접입력해서 로그인/회원가입
+            </h2>
+            <form class="input">
+
+                <input type="text" id="inpId" class="inp-id" required placeholder="아이디">
+                <label for="inpId" class="a11y-hidden">아이디 입력창</label>
+
+                <input type="password" id="inpPw" class="inp-pw" required placeholder="비밀번호">
+                <label for="inpPw" class="a11y-hidden">비밀번호 입력창</label>
+
+                <input type="checkbox" id="holdCheck" class="hold-check">
+                <label for="holdCheck" class="hold-check-label">로그인 상태 유지</label>
+
+                <button type="submit" class="login-btn">로그인</button>
+                
+            </form>
+
+            <div class="join-search-btn">
+                <a href="#" class="join">회원가입</a>
+                <span></span>
+                <a href="#" class="search-id-pw">아이디 / 비밀번호 찾기</a>
+            </div >
+
+            <div class="or">
+            <h2 class="a11y-hidden">
+                sns 계정으로 로그인
+            </h2>
+            <ul class="sns-btn-wrap">
+                <li>
+                    <button type="button">구글 계정으로 로그인</button>
+                </li>
+            </ul>
         </div>
-        <div class="divide"></div>
-        <h2 class="content-title">위니브에서 여러분의 궁금증을 해결하세요! :)</h2>
 
-        <form class="login-wrap">
-            <input class="inp-id" type="text" placeholder="아이디">
-            <input class="inp-pw" type="password" placeholder="비밀번호">
+        </main>
 
-            <input type="checkbox" class="hold-check" id="hold-check">
-            <label class="hold-check-label" for="hold-check">로그인 상태 유지</label>
-            <button class="login-btn" type="button">로그인</button>
-        </form>
+        <!-- <button class="btn-close">
+            <img src="./images/close.svg" alt="로그인 창 닫기 버튼">
+        </button> -->
+
     </article>
-
-</body>
+  </body>
 </html>

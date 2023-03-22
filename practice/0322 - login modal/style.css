@@ -1,101 +1,162 @@
+/* font */
+@font-face {
+    font-family: Spoqa Han Sans Neo;
+    src: url("../font/SpoqaHanSansNeo-Regular.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Spoqa Han Sans Neo;
+    src: url("../font/SpoqaHanSansNeo-Medium.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Spoqa Han Sans Neo;
+    src: url("../font/SpoqaHanSansNeo-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+body {
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+}
+
 /* reset */
+
 body,
 h1,
 h2,
+h3,
 p,
-button {
-    margin: 0;
+button,
+input,
+a,
+ul {
+    margin: inherit;
     padding: 0;
 }
 
-button {
-    border: none;
-    background-color: transparent;
-    color:inherit;
-
+h1,
+h2,
+h3 {
+    font-size: inherit;
+    font-weight: inherit;
 }
 
+button {
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.a11y-hidden {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    clip-path: circle(0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+
+
+/* 부모 요소 */
 
 body {
-    background-color: salmon;
+    background-color: salmon; 
 }
 
-.login-madal {
-    width: 520px;
-    /* 지우기 */
+
+.login-modal {
     background-color: white;
+    max-width: 520px;
     margin: 0 auto;
-    padding: 20px 24px 25px 24px;
-    box-sizing: border-box;
+    /* margin-top: 100px; */
+    /* 이거 줄때 닫기 버튼도 같이 마진 먹여짐,
+    세로중앙정렬 해결못해서 일단 떨어트리려고 준거였음 */
+    border: 1px solid 
+    #C4C4C4;
+    border-radius: 10px;
 }
 
-.modal-head {
-    margin-bottom: 18px;
+.login-modal::after {
+    content:'';
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    position: fixed;
+    z-index: -999;
 }
 
+/* header */
 
-.modal-head-title {
-    font-size: 16px;
-    font-weight: 500;
+.head {
+    border-bottom: 1px solid #C4C4C4;
+    padding: 20px 0;
+}
+
+.head-title {
     text-align: center;
-    flex-grow: 2;
+    font-weight: 500;
 }
 
-.btn-close {
-    float: right;
-    margin-top: -18px;
-    cursor: pointer;
-}
-.btn-close img {
-    width: 16px;
+/* main */
+.login {
+    padding: 26px;
 }
 
-.divide {
-    width: 100%;
-    margin: 0 -24px;
-    /* margin: auto; */
-    height: 1px;
-    background-color: #C4C4C4;
+.login-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 24px;
 }
 
-.content-title {
-   font-size: 20px;
-   font-weight: 500; 
-   margin: 26px 0 24px 0;
-}
+/* main - form */
 
 .inp-id,
-.inp-pw  {
-    display: block;
+.inp-pw {
     width: 100%;
     padding: 15px 16px;
     box-sizing: border-box;
-    border: 1px solid #C4C4C4;
     border-radius: 5px;
+    border: 1px solid #C4C4C4;
 }
 
-.login-wrap input::placeholder {
+.inp-id::placeholder,
+.inp-pw::placeholder {
     color: #767676;
     font-size: 16px;
 }
 
-.login-wrap input:first-child {
-    margin-bottom: 5px;
+.inp-pw {
+    margin-top: 10px;
 }
-
-.login-wrap input:nth-child(2) {
-    margin-bottom: 16px;
-}
-
-
 
 .hold-check {
     appearance: none;
     width: 1.2em;
     height: 1.2em;
     background: url(./images/check-box-off.svg) no-repeat 0 0 / cover;
-    margin: 0 4px 2px 0;
-    vertical-align: middle;
+    vertical-align: -0.2em;
+    margin: 16px 4px 0 0;
 }
 
 .hold-check:checked {
@@ -104,18 +165,76 @@ body {
 
 .hold-check-label {
     color: #767676;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 .login-btn {
     width: 100%;
     background-color: #2F80ED;
-    color:white;
+    color: white;
     font-size: 18px;
-    font-weight: 600;
-    padding:14px 0;
+    font-weight: 700;
+    padding: 14px 0;
     border-radius: 5px;
     margin-top: 20px;
-    cursor:pointer;
+    cursor: pointer;
 }
+
+.join-search-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.join-search-btn a {
+    vertical-align: top;
+    color: #767676;
+    font-size: 14px;
+}
+
+.join-search-btn span {
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    background-color: #767676;
+    margin: 0 12px;
+}
+
+.or {
+    position: relative;
+    margin-top: 30px;
+}
+
+.or::after {
+    content: '또는';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    padding: 0 13px;
+    transform: translateX(-50%);
+    background-color: white;
+    color: #767676;
+    font-size: 14px;
+}
+
+.or::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top:10px;
+    width: 100%;
+    height: 1px;
+    background-color: #C4C4C4;
+}
+
+.sns-btn-wrap {
+    position: absolute;
+    box-shadow: inset 0 0 10px red;
+}
+
+
+
+
+
+/* .btn-close {
+    box-shadow: inset 0 0 10px rgb(0, 255, 72);
+} */
