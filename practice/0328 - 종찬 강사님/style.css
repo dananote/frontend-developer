@@ -1,0 +1,176 @@
+:root {
+    font-family: 'Montserrat', sans-serif;
+	/*
+	font-weight: 500;
+	font-weight: 700;
+	*/
+}
+
+/* reset */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/* section */
+
+[class^="section"] {
+    padding: 100px 0;
+}
+
+.section-purple {
+    background-color:#673399;
+}
+
+.section-pink{
+    background-color:seashell;
+}
+
+.wrapper {
+    /* box-shadow: inset 0 0 10px rgb(0, 21, 255); */
+    width: 1080px;
+    max-width: calc(100% - 60px);
+    margin: 0 auto;
+}
+
+[class^="title"] {
+    margin-bottom: 100px;
+    /* box-shadow: inset 0 0 10px rgb(0, 21, 255); */
+}
+
+[class^="contents"] {
+    box-shadow: inset 0 0 10px rgb(0, 255, 34);
+}
+
+
+/* first-title */
+
+
+.title-first {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    /* box-shadow: inset 0 0 10px rgb(255, 0, 0); */
+    flex-shrink: 0;
+    flex-basis: 26%;
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+}
+
+.text strong {
+    font-weight: 500;
+    box-shadow: inset 0 -20px 0 orangered;
+}
+
+.sub-text {
+    /* box-shadow: inset 0 0 10px rgb(225, 255, 0); */
+    color: #bd8fe8;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-right: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.sub-text::before {
+    content: '';
+    display: inline-block;
+    width: 200px;
+    height: 2px;
+    background-color: #bd8fe8;
+    margin-right: 20px;
+}
+
+/* first-card */
+
+.card-first {
+    box-shadow: inset 0 0 10px red;
+    display: flex;
+    background-color: #fff;
+    /* min-height: 200px; */
+}
+
+.card-first + .card-first {
+    margin-top: 24px;
+}
+
+.card-first:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.card-cover {
+    flex-basis: 26%;
+    flex-shrink: 0; 
+    box-shadow: inset 0 0 10px rgb(60, 0, 255);
+    background: url(./images/first-photo01.png) no-repeat 0 0 /cover;
+    position: relative;
+}
+
+.card-title {
+    background-color: rgba(103, 51, 153, 0.4);
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+
+}
+
+/* .card-title {
+} */
+
+/* .card-title h2 {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+} */
+
+
+
+
+
+/* media */
+
+@media (max-width: 1080px) {
+    .title-first,
+    .sub-text {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sub-text::before {
+        margin: 20px 0;
+    }
+    .card-first,
+    .card-first:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .card-title {
+        flex-basis: none;
+        width: 100%;
+    }
+
+}
+
