@@ -1,0 +1,36 @@
+div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 24px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 34px;
+    color: white;
+    font-weight: bold;
+}
+
+.ball1 {
+    background-color: salmon;
+}
+
+.ball2 {
+    background-color: slateblue;
+}
+
+.ball3 {
+    background-color: seagreen;
+}
+
+.ball4 {
+    background-color: sandybrown;
+}
+
+.ball5 {
+    background-color: slategrey;
+}
+
+.ball6 {
+    background-color: skyblue;
+}

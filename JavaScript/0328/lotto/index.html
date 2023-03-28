@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>로또 번호 추첨기</h1>
+
+    <script>
+        // var num = parseInt(Math.random() * 45 + 1);
+
+        var lotto = [];
+
+        while(lotto.length < 6){
+            if(lotto.indexOf() == -1){
+                lotto.push(parseInt(Math.random() * 45 + 1));
+            }
+        }
+        console.log(lotto);
+
+        document.write("<div class='ball1'>" + lotto[0] + "</div>");
+        document.write("<div class='ball2'>" + lotto[1] + "</div>");
+        document.write("<div class='ball3'>" + lotto[2] + "</div>");
+        document.write("<div class='ball4'>" + lotto[3] + "</div>");
+        document.write("<div class='ball5'>" + lotto[4] + "</div>");
+        document.write("<div class='ball5'>" + lotto[5] + "</div>");
+
+        
+    </script>
+  </body>
+</html>
