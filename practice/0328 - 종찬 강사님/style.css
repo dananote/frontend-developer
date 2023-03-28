@@ -318,6 +318,21 @@ img {
     object-fit: cover;
 }
 
+.img-item-a {
+    position: relative;
+}
+
+.img-item-a::before {
+    content:'';
+    display: block;
+    width: 110px;
+    height: 110px;
+    background: url(./images/badge.png);
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+
 /* label */
 
 [class^="label-item"] {

@@ -81,7 +81,6 @@ li {
 /* 부모 요소 */
 
 
-
 .login-modal {
     background-color: white;
     max-width: 520px;
@@ -103,6 +102,9 @@ li {
     position: fixed;
     z-index: -999;
 }
+
+
+
 
 /* header */
 
