@@ -1,0 +1,21 @@
+.basic-btn {
+    display: block;
+    cursor: pointer;
+    /* width: 100%; */
+    text-align: center;
+    background-color: #D97652;
+    color: white;
+    font-weight: 700;
+    padding: 16px 30px;
+    border-radius: 3rem;
+}
+
+.basic-btn:hover {
+    background-color: #bc6748;
+}
+
+@media screen and (max-width: 625px) {
+    .basic-btn {
+        padding: 12px 24px;
+    }
+}

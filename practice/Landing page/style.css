@@ -1,0 +1,178 @@
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+
+/* reset */
+
+body,
+h1,
+h2,
+p,
+a,
+ul,
+li {
+    margin: initial;
+    padding: initial;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+button {
+    all: unset;
+}
+
+img {
+    vertical-align: top;
+}
+
+[class$="wrapper"] {
+    max-width: 1280px;
+    width: calc(100% - 64px);
+}
+
+/* header */
+
+
+header {
+    background-color: #F2E9D8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-wrapper {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.logo img {
+    vertical-align: middle;
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.more-btn {
+    display: none;
+}
+
+/* sean-one */
+
+
+
+.sean-one {
+    background-color: #F2E9D8;
+    margin-top: 100px;
+}
+
+.sean-one-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 130px;
+    margin: 0 auto;
+    box-shadow: inset 0 0 10px blue;
+}
+
+.seon-one-left {
+    /* flex-shrink: 0; */
+}
+
+.seon-one-left h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.seon-one-left p {
+    line-height: 2;
+    margin: 40px 0;
+}
+
+
+/* media */
+
+@media screen and (max-width: 625px) {
+    .header-wrapper {
+        height: 76px;
+    }
+
+    .logo img {
+        
+        height: 28px;
+    }
+    
+    .more-btn {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url(./images/menu.svg) no-repeat center;
+        cursor: pointer;
+    }
+
+    .menu {
+        position: fixed;
+        padding: 22px 50px;
+        box-sizing: border-box;
+        top: 0;
+        right: 0;
+        width: 75%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #263140;
+        visibility: hidden;
+    }
+
+    .menu::before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url(./images/arrow-right.svg) no-repeat center;
+        margin-left: -30px;
+        margin-bottom: 32px;
+        cursor: pointer;
+    }
+
+    .menu button {
+        width: 30%;
+        margin-top: 20px;
+    }
+
+    .menu li {
+        color: white;
+        font-weight: bold;
+    }
+
+    .menu.active {
+        visibility: visible;
+    }
+
+}
