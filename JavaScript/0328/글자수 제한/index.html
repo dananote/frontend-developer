@@ -28,19 +28,31 @@
   <body>
     <h1>자기소개</h1>
     <div class="wrap">
-        <textarea id="text" rows="3" onkeydown="counting()">안녕하세요</textarea>
+        <textarea id="text" onkeydown="counting()">안녕하세요</textarea>
+        <!-- <textarea id="text" rows="3" onkeydown="counting()">안녕하세요</textarea> -->
         <span id="count">(0 / 200)</span>
     </div >
 
     <script>
+
         function counting() {
-            var content = document.getElementById('text').value; 
-            if(content.length > 200){
-                content = content.substring(0,200);
+            let content = document.getElementById('text').value;
+            if(content.length > 20){
+                content = content.substring(0,20);
                 document.getElementById('text').value = content;
             }
             document.getElementById('count').innerHTML = `(${content.length} / 200)`;
         }
+        
+
+        // function counting() {
+        //     var content = document.getElementById('text').value; 
+        //     if(content.length > 200){
+        //         content = content.substring(0,200);
+        //         document.getElementById('text').value = content;
+        //     }
+        //     document.getElementById('count').innerHTML = `(${content.length} / 200)`;
+        // }
     
     </script>
   </body>
