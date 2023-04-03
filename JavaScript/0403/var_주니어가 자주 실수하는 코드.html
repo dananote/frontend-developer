@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        var x = 10;
+        var y = 20;
+
+        x = x + 10;
+    </script>
+    <script>
+        var x = 100; //원래 여기서 문제가 발생해야했음 var의 문제
+        // 재정의를 허락하는 var, let 과 const는 재정의를 허락하지 않음
+        // script는 다른 태그에 있어도 변수를 공유합니다. var로 선언한 경우 덮어 써서 견고한 코드를 작성하는데 방해가 됩니다.
+
+        // 1000줄의 코드
+
+        console.log(x); // 10출력 될거라는 기대를 깨고 100 출력
+        console.log(y);
+    </script>
+
+  </body>
+</html>
