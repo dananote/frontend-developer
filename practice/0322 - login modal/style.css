@@ -235,24 +235,55 @@ li {
     padding: 16px;
 }
 
+[class^="button"] {
+    position: relative;
+}
+
+
+[class^="button"]::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+    background-image: url('./images/sns_sprites.png');
+}
+
+.button-google::before {
+    background-position: -28px -28px;
+}
+
+.button-facebook::before{
+    background-position: -28px -112px;
+}
+
+.button-naver::before{
+    background-position: -28px -196px;
+}
+
+.button-kakao::before{
+    background-position: -28px -280px;
+}
+
 .button-google {
     border: 1px solid #767676;
-    background: url(./images/Google.svg) no-repeat 16px center / 28px;
+    
 }
 
 .button-facebook {
     border: 1px solid #2D9CDB;
-    background: url(./images/facebook.svg) no-repeat 16px center / 28px;
 }
 
 .button-naver {
     border: 1px solid #00BF18;
-    background: url(./images/naver.svg) no-repeat 16px center / 28px;
+
 }
 
 .button-kakao {
     border: 1px solid #F2C94C;
-    background: url(./images/kakao.svg) no-repeat 16px center / 28px;
+
 }
 
 .sns-btn-wrap li + li {
