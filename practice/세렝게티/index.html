@@ -56,12 +56,25 @@
         12 : {"title" : "문제 12번", "type" : "PJ", "A" : "P", "B" : "J"},
     }
 
-    var result = {
-        ISTJ : {"animal" : "하마", "explain" : "하마설명", "img" : "./images/lion.jpg"},
-        ENFP : {"animal" : "호랑이", "explain" : "호랑이설명", "img" : "./images/lion.jpg"},
-        ENFJ : {"animal" : "원숭이", "explain" : "원숭이설명", "img" : "./images/lion.jpg"},
-        ESTJ : {"animal" : "기린", "explain" : "기린설명", "img" : "./images/lion.jpg"},
-    }
+        var result = {
+            "ISTJ": {"animal": "하마", "explain": "하마 설명", "img": "./images/lion.jpg"},
+            "ISFJ": {"animal": "부엉이", "explain": "부엉이 설명", "img": "./images/lion.jpg"},
+            "INFJ": {"animal": "물소", "explain": "물소 설명", "img": "./images/lion.jpg"},
+            "INTJ": {"animal": "치타", "explain": "치타 설명", "img": "l./images/ion.jpg"},
+            "ISTP": {"animal": "나무늘보", "explain": "나무늘보 설명", "img": "./images/lion.jpg"},
+            "ISFP": {"animal": "거북이", "explain": "거북이 설명", "img": "./images/lion.jpg"},
+            "INFP": {"animal": "코끼리", "explain": "코끼리 설명", "img": "./images/lion.jpg"},
+            "INFP": {"animal": "침팬지 사자", "explain": "침팬지 설명", "img": "./images/lion.jpg"},
+            "ESTP": {"animal": "악어", "explain": "악어 설명", "img": "./images/lion.jpg"},
+            "ESFP": {"animal": "미어캣", "explain": "미어캣 설명", "img": "./images/lion.jpg"},
+            "ENFP": {"animal": "멋쟁이 사자", "explain": "멋쟁이 사자 설명", "img": "./images/lion.jpg"},
+            "ENTP": {"animal": "태양새", "explain": "태양새 설명", "img": "./images/lion.jpg"},
+            "ESTJ": {"animal": "기린", "explain": "기린 설명", "img": "./images/lion.jpg"},
+            "ESFJ": {"animal": "고릴라", "explain": "고릴라 설명", "img": "./images/lion.jpg"},
+            "ESFJ": {"animal": "카피바라", "explain": "카피바라 설명", "img": "./images/lion.jpg"},
+            "ESTJ": {"animal": "호랑이", "explain": "호랑이 설명", "img": "./images/lion.jpg"}
+            }
+    
 
     function start() {
         $(".start").hide()
@@ -75,9 +88,9 @@
             $(".result").show()
             var MBTI = ""; 
             ($("#EI").val() < 2) ? MBTI += "I" : MBTI += "E";
-            ($("#SN").val() < 2) ? MBTI += "S" : MBTI += "N";
-            ($("#TF").val() < 2) ? MBTI += "T" : MBTI += "F";
-            ($("#PJ").val() < 2) ? MBTI += "P" : MBTI += "J";
+            ($("#SN").val() < 2) ? MBTI += "N" : MBTI += "S";
+            ($("#TF").val() < 2) ? MBTI += "F" : MBTI += "T";
+            ($("#PJ").val() < 2) ? MBTI += "J" : MBTI += "P";
             alert(MBTI);
             $("#img").attr('src',result[MBTI]["img"]);
             $("#animal").html(result[MBTI]["animal"]);
@@ -95,7 +108,6 @@
 
     $("#A").click(function(){
         var type = $("#type").val();
-        // console.log($("#type").val());
         var preValue =  $("#" + type).val();
         $("#" + type).val(parseInt(preValue) + 1);
         next();
