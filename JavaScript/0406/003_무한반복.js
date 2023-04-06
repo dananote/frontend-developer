@@ -1,28 +1,49 @@
 
-let answer = Math.floor(Math.random() * 100)
-// random은 seed라는 값을 주면 동일한 랜덤값이 나오는 수학수식입니다.(규칙이 있다는 뜻)
-// ~~(Math.random()*100)
-let count = 0
+// let answer = Math.floor(Math.random() * 100)
+// // random은 seed라는 값을 주면 동일한 랜덤값이 나오는 수학수식입니다.(규칙이 있다는 뜻)
+// // ~~(Math.random()*100)
+// let count = 0
 
-for (;;) {
-    count += 1
-    let userInput = parseInt(window.prompt('값을 입력해주세요!'))
-    if (answer > userInput) {
-        window.alert('UP!')
-    }
-    else if (answer < userInput) {
-        window.alert('DOWN!')
-    }
-    else if (Number.isNaN(userInput)) {
-        window.alert('다시 입력하세요!')
-    }
-    else {
-        window.alert('Correct!')
+// for (;;) {
+//     count += 1
+//     let userInput = parseInt(window.prompt('값을 입력해주세요!'))
+//     if (answer > userInput) {
+//         window.alert('UP!')
+//     }
+//     else if (answer < userInput) {
+//         window.alert('DOWN!')
+//     }
+//     else if (Number.isNaN(userInput)) {
+//         window.alert('다시 입력하세요!')
+//     }
+//     else {
+//         window.alert('Correct!')
+//         break
+//     }
+// }
+
+// console.log(`${count}번째 맞추셨습니다!`)
+
+let answer = parseInt(Math.random()*100);
+let count = 0;
+
+for(;;) {
+    let userInput = parseInt(prompt('숫자를 입력해주세요!'))
+    if(userInput < answer) {
+        alert('UP!')
+    } else if (userInput > answer) {
+        alert('DOWN!')
+    } else if(Number.isNaN(userInput)) {
+        alert('다시 입력해주세요!')
+    } else {
+        alert('Correct!')
         break
     }
+
+    count = count + 1
 }
 
-console.log(`${count}번째 맞추셨습니다!`)
+console.log(`${count}번째에 맞추셨어요!`)
 
 
 // for (;;) { 
@@ -51,7 +72,7 @@ for(let i = 0;;){
 
 let i = 0
 for(;;) {
-    console.log('이건 무한반복 아님')
+    console.log('무한반복 코드')
     i += i;
     if(i >= 10){
         break
