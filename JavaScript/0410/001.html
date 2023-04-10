@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <!-- 점심식단 -->
+    <article id="container">
+        <ul>
+            <li>탕수육</li>
+            <li class="item-second">유산슬</li>
+            <li>짜장면</li>
+        </ul>
+    </article>
+
+    <!-- 저녁식단 -->
+    <article id="container">
+        <ul>
+            <li>된장국</li>
+            <li class="item-second">김치찌개</li>
+            <li>해장국</li>
+        </ul>
+    </article>
+    <script>
+        // document로 접근시 본적으로 객체 형태로 불러옴 키는 숫자형태로 돼있는데 점연산자로 접근하려면 기본적으로 변수 식별자 규칙을 따라는 이름이어야함
+        // <변수 식별자 규칙>
+        // 숫자로 시작하면 안되고, 특수문자는 _$ 만, 대소문자를 구별, 예약어를 쓰면 안된
+        // 태그로 접근
+        // console.log(document.getElementsByTagName('li')[0]);  //'짬뽕'
+
+        // 클래스로 접근
+        // console.log(document.getElementsByClassName('item-second')[0]); // '탕수육'
+        
+        //document 영역 설정
+        // const container = document.getElementById('container'); 
+
+        // // querySelector은 css 선택자로 요소에 접근 가능 - 첫번째 요소를 반환
+        // console.log(document.querySelector('li')) // '탕수육'
+        // console.log(document.querySelector('.item-second')) // '유산슬'
+        // console.log(document.querySelectorAll('li')) // [li, li.item-second, li, li, li.item-second, li]
+        // console.log(document.querySelector('li:nth-child(3)')) // 짜장면
+
+        // // document가 아닌 container 안에서만 찾음
+        // console.log(container.getElementsByTagName('li')[0]);  // '탕수육'
+        // console.log(container.getElementsByTagName('li')[2]);  // '짜장명'
+        // console.log(container.getElementsByClassName('item-second')); // '유산슬'
+
+        // // css 선택자로 단일 요소에 접근하기
+        // document.querySelector()
+
+
+        const container = document.getElementById('container');
+
+
+        // Htmlcollection 과 nodelist*(단, 이미 가지고 있는 요소의 변화는 변경함 추가나 제거에만  정적)
+        console.log(container.querySelectorAll('li')); // NodeList 정적, 변경 사항 반영이 안됨
+        console.log(container.getElementsByTagName('li')); // HTMLCollection 동적, 변경 사항 바로 반영
+
+        container.querySelector('.item-second').textContent = '라조기'; //변경됨
+        container.querySelector('.item-second').classList.add('new'); //변경됨
+
+
+
+        // const target = document.querySelector('.item-second')
+        // target.remove();
+
+        // const li = document.createElement('li'); // 아직 컴퓨터의 메모리에만 저장한 상태
+        // container.append(li);
+    
+
+    </script>
+  </body>
+</html>

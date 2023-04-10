@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        ul,
+        li {
+            list-style: none;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: rgb(232, 232, 232);
+        }
+
+        ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        div.red {
+            background-color: red;
+        }
+
+        div.yellow {
+            background-color: yellow;
+        }
+
+        div.green {
+            background-color: green;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="canvas"></div>
+    <ul>
+        <li><button class="btn-red" type="button">빨강</button></li>
+        <li><button class="btn-yellow" type="button">노랑</button></li>
+        <li><button class="btn-green" type="button">초록</button></li>
+    </ul>
+    
+    <script>
+        // 내 코드
+        // const box = document.querySelector(".canvas");
+        // const btn = document.getElementsByTagName("button");
+
+        // btn[0].addEventListener("click", function(){
+        //     box.classList.toggle('red');
+        // })
+
+        // btn[1].addEventListener("click", function(){
+        //     box.classList.toggle('yellow');
+        // })
+
+        // btn[2].addEventListener("click", function(){
+        //     box.classList.toggle('green');
+        // })
+
+        //재영님 코드
+
+        // btn.foreach(e => e.addEventlistner('click', function(){
+        //     box.className='';
+        //     box.classList.add(e.className);
+        // }))
+
+        // 강사님 코드 (반복되는것을 주기 전)
+        // const canvas = document.querySelector(".canvas");
+        // const btnRed = document.querySelector(".btn-red")
+        // const btnYellow = document.querySelector(".btn-yellow")
+        // const btnGreen = document.querySelector(".btn-green")
+
+        // btnRed.addEventListener('click', function(){
+        //     canvas.classList.remove('yellow', 'red', 'green') // 1. 클래스명을 다 입력하는 방법
+        //     canvas.classList.add('red');
+        // })
+
+        // btnYellow.addEventListener('click', function(){
+        //     canvas.className = ""; // 2. 클래스를 빈 문자열로 넣기
+        //     canvas.classList.add('yellow');
+        // })
+
+        // btnGreen.addEventListener('click', function(){
+        //     canvas.classList.remove('yellow', 'red', 'green')
+        //     canvas.classList.add('green');
+        // })
+
+        // 강사님 코드 (반복되는것을 줄임)
+        const canvas = document.querySelector(".canvas");
+        const btns = document.querySelectorAll("button[class^='btn']");
+
+        // const btnArray = [btnRed, btnYellow, btnGreen];
+            // btns.forEach((item) => {
+            //     item.addEventListener('click', function(){
+            //         cansvas.classList.remove('yellow', 'red', 'green');
+            //         if (item.classList.contains("btn-red")) {
+            //             canvas.classList.add('red');
+            //         } else if (item.classList.contains("btn-yellow")) {
+            //             canvas.classList.add('yellow');
+            //         } else {
+            //             canvas.classList.add('green');
+            //         }
+            //     })
+            // })
+
+        btns.forEach((item) => {
+            item.addEventListener('click', () => {
+                canvas.classList.remove('yellow', 'red', 'green');
+                if (item.classList.contains("btn-red")) {
+                    canvas.classList.add('red');
+                } else if (item.classList.contains("btn-yellow")) {
+                    canvas.classList.add('yellow');
+                } else {
+                    canvas.classList.add('green');
+                }
+            });
+        })
+        
+
+
+
+
+    </script>
+  </body>
+</html>
