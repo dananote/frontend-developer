@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <p></p>
+    <input type="text">
+    <button>Write Something!</button>
+
+<script>
+    const myBtn = document.querySelector("button");
+    const myP = document.querySelector("p");
+    const myInput = document.querySelector("input");
+
+    // ✅ textContent
+    myBtn.addEventListener('click', function(){
+        myP.textContent = myInput.value; // 바로 텍스트를 숨긴 후내보내서 랜더링 속도 제일 빠름
+        // textContent 속성은 노드의 텍스트 콘텐츠를 표현합니다.
+    });
+
+    // ✅ innerHTML, innerTExt
+    myBtn.addEventListener('click', function(){
+        myP.innerHTML = "<a>hello</a>"; // html 요소가 있는지 판단 후 적용하고 렌더링
+        myP.innerText = "안녕하세요!"; // html, css가 있는지  판단 후 숨기고 적용 후 렌더링
+        // innerHTML 은 요소(element) 내에 포함된 HTML 마크업을 가져오거나 설정합니다.
+        // 만약현재 인풋 창에 <strong>good!</stroong>을 쓰면 strongng을 html로 전환하고 화면에 렌더링함
+        // innerText 속성은 요소의 렌더링된 텍스트 콘텐츠를 나타냅니다.(렌더링된에 주목하세요. innerText는 "사람이 읽을 수 있는" 요소만 처리합니다.)
+
+    });
+
+    // ✅ .addEventListener('input', )
+        // input 요소에 'input' 이벤트를 연결하면 실시간으로 값이 반영되게 만들 수도 있습니다.
+    myInput.addEventListener('input', ()=>{
+      myP.textContent = myInput.value;
+    });
+</script>
+  </body>
+</html>

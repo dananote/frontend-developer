@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+  </head>
+  <body>
+    <p>hello!</p>
+
+<script>
+    const txt = document.querySelector('p');
+
+    // const name = '<script>alert(123123);
+    // 내부에 스크립트가 들어가는것을 방지하고 있음
+
+    const name = "<img src='x' onerror='alert(123123)'>"; // 이미지 로드가 실패해서 알럿이 뜨는데 이는 onerror가 실행됨 (내부 스크립트를 방지하고 있지만 이같은 경우는 아직 제어가 안됨)
+    txt.innerHTML = name;
+</script>
+  </body>
+</html>

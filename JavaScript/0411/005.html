@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <p>hello!</p>
+
+<script>
+    // 인라인 스타일로 들어가서 사용이 적절하진 않음
+    // 작업 효율을 위해서 js로 스타일을 수정하는건 지향하자
+    const target = document.querySelector("p");
+    const textColor = target.style.color; // 현재 스타일 정보를 가져옵니다.
+    target.style.color="red"; // 현재 스타일 정보를 변경합니다.
+    target.style.fontweight="bold"; //아직 추가하지 않는 스타일은 추가해야함
+    target.style.color= null // 현재 스타일을 초기화 합니다.
+</script> 
+  </body>
+</html>
