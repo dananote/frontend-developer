@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <ul></ul>
+    <button>생성!</button>
+
+    <script>
+        const ul = document.querySelector('ul')
+        const btn = document.querySelector('button')
+
+
+        for(let i = 0; i < 5; i++){
+            btn.addEventListener('click', function(){
+                const li = document.createElement('li')
+                const btnRemove = document.createElement('button')
+
+                li.innerText='new!';
+                btnRemove.innerText='삭제'
+                ul.appendChild(li);
+                li.appendChild(btnRemove)
+
+                btnRemove.addEventListener('click', function(){
+                    li.remove()
+                })
+            })
+        }
+
+
+        
+
+
+
+
+    </script>
+  </body>
+</html>

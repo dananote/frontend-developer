@@ -80,3 +80,21 @@ const test2 = [
 for(const [i, j, ...k] of test2) {
     console.log(i, j, k);
 }
+
+// 4월 12일 추가
+Math.max(...[10, 20, 30]) //배열은 전개구문 해야 max, min 할 수 있음
+Math.min(...[10, 20, 30])
+Math.max(...[10, 20, 30,[11, 12, 13,[21, 21, 23]]].flat(Infinity)) // flat하고 infinity 해야함
+
+// ❗️오류 나는 코드
+Math.max([10, 20, 30])
+Math.min([10, 20, 30])
+Math.max([10, 20, 30,[11, 12, 13,[21, 21, 23]]])
+
+// 자주 사용되는 코드
+const s = 'hello world';
+// 한자씩 넣고 싶을때
+[s] // s.split  //['hello world']
+[...s] // s.split('') // ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+{...s} //  객체로 전개 구문됨
+//{0: 'h', 1: 'e', 2: 'l', 3: 'l', 4: 'o', 5: ' ', 6: 'w', 7: 'o', 8: 'r', 9: 'l', 10: 'd'}
