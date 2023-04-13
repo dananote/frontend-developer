@@ -85,3 +85,18 @@ let 함수 = x => x + 100
 const 함수 = function (x) {
     return x + 100
 }
+
+
+//
+let a = 10
+let b = 10
+function 함수1() {
+    let a = 20
+    let b = 20
+    function 함수2() {
+        let a = 30
+        console.log(a, b)
+    }
+    함수2()
+}
+함수1()
