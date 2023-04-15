@@ -1,0 +1,10 @@
+// 사용자에게 이름을 받고 그 이름으로 환영인사하는 함수
+// 이름을 입력했을 경우와 입력하지 않았을 경우를 생각
+
+function user(name){
+    let newName = name || 'friend';
+    let msg = `hello, ${newName}`;
+    alert(msg);
+}
+
+user(prompt('이름을 입력해주세요'));
