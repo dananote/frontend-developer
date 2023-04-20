@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        //todo 생성자 함수
+
+function Factory() {
+
+}
+
+//* 일반적인 함수 호출
+let factory1 = Factory() // undefined
+
+
+
+//* new 연산자를 붙인 함수 호출
+let factory2 = new Factory() // Factory {}
+
+
+///
+
+function user(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+let taehee = new user('taehee', 28); // user {name: 'taehee', age: 28}
+let danna = new user('danna', 26); // user {name: 'danna', age: 26}
+
+
+// new 연산자를 쓰게되면...
+function user(name, age) {
+    this = {} // 1. 빈 객체를 만들어 this에 할당합니다. (실세론 생략돼있음)
+
+    this.name = name;
+    this.age = age; // 2. 함수 본문을 실행하면서 this에 프로퍼티들을 추가합니다.
+
+    return this // 3. 마지막으로 this를 반환  (실세론 생략돼있음)
+}
+
+function Factory(name) {
+    this.name = name;
+    this.sayHello = function () {
+        console.log(this.name)
+    }
+}
+
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+
+
+    <!-- 앵커의 기본 동작을 중지 -->
+<a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
+<form action="">
+    <button type="submit" class="submit">제출</button>
+</form>
+<form action="">
+	<button type="submit" class="submit2">제출2</button>
+</form>
+
+<script>
+     // .preventDefault()
+     // 이벤트 동작은 막지만 이벤트 전파는 막지 못함
+
+    const link = document.querySelector('.link');
+    link.addEventListener('click', (event) => {
+        console.log('clicked');
+        event.preventDefault();
+    })
+
+    const submit = document.querySelector('.submit');
+    submit.addEventListener('click', (event) => {
+        console.log('제출해도 세로고침되지 않습니다.');
+        event.preventDefault();
+    })
+
+    document.addEventListener('contextmenu',(event) => {
+        console.log('오른쪽 클릭');
+        event.preventDefault();
+        alert('오른쪽 클릭을 지원하지 않습니다.')
+    })
+
+    const submit2 = document.querySelector('.submit2');
+	submit2.addEventListener('click', (event) => {
+	    console.log('clicked');
+	    event.preventDefault();
+        event.stopPropagation();
+        // 이벤트 전파를 차단하여 아래 이벤트는 전달되지 않음
+	});
+	
+	document.body.addEventListener('click', () => {
+	    console.log('event still alive!');
+	}, true); // 기본값이 flase일땐 버블링 이벤트 true를 넣으면 캡처링 이벤트
+    // 현재 캡처링 이벤트로 바꼈기 때문에 해당 이벤트도 실행됨
+</script>
+
+
+
+  </body>
+</html>
