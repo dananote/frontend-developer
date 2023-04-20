@@ -15,8 +15,8 @@
         </section>
 
         <section>
-            <p>max-width: 800px</p>
-            <h2>current-width: <span class="current-max-width">800px</span></h2>
+            <p>max-width: 1000px</p>
+            <h2>current-width: <span class="current-max-width">1000px</span></h2>
             <div class="max-width"></div>
         </section>
 
@@ -41,8 +41,6 @@
         const box = document.querySelector('.width')
         const maxBox = document.querySelector('.max-width')
         const minBox = document.querySelector('.min-width')
-        // const currentWidth = document.querySelectorAll('span');
-        // const box = document.querySelectorAll('div')
 
         window.addEventListener('resize', function(){
             let current = box.offsetWidth;
@@ -61,6 +59,11 @@
             minWidth.textContent = `${currentMin} px`;
         })
 
+
+        // 여기서 문제 어떻게 foreach를 사용하는지?
+
+        // const currentWidth = document.querySelectorAll('span');
+        // const box = document.querySelectorAll('div')
         
 
 
