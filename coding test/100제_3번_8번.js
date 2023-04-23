@@ -39,6 +39,8 @@ console.log(a+b);
 
 //* 답: 1
 // false인 것들은 ''(빈문자열), 0, undefined, null, NaN
+//falsy : 0, null, undefined, "", NaN
+// nullish : null, undefined
 
 
 //todo 문제 7번. 변수명
@@ -64,4 +66,4 @@ var d = {
 console.log(d['wieght']); 
 
 //* 답: 가장 나중에 선언된 84 반환 그 전에 선언된것은 객체 안에 들어가지 못함
-//(메모리상에서 변수를 선언하고 데이터할당하는 과정을 생각하면 wieght의 값에 입력되는 메모리 주소값이 78 -> 84 로 변경될것)
+//(메모리상에서 변수를 선언하고 데이터할당하는 과정을 생각하면 weight의 값에 입력되는 메모리 주소값이 78 -> 84 로 변경될것)

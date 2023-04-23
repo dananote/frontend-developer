@@ -10,19 +10,19 @@
   <body>
     <article class="wrap">
         <section>
-            <h2>width: <span class="curren-width">500px</span></h2>
+            <h2>width:<span class="current-width">500px</span></h2>
             <div class="width"></div>
         </section>
 
         <section>
             <p>max-width: 1000px</p>
-            <h2>current-width: <span class="current-max-width">1000px</span></h2>
+            <h2>current-width:<span class="current-max-width">1000px</span></h2>
             <div class="max-width"></div>
         </section>
 
         <section>
             <p>min-width: 800px</p>
-            <h2>current-width: <span class="current-min-width">800px</span></h2>
+            <h2>current-width:<span class="current-min-width">800px</span></h2>
             <div class="min-width"></div>
         </section>
     </article>
@@ -35,39 +35,46 @@
         // nodelist..? querySelector 로 불러오니까? foreach....
 
 
-        const Width = document.querySelector('.curren-width')
-        const maxWidth = document.querySelector('.current-max-width')
-        const minWidth = document.querySelector('.current-min-width')
-        const box = document.querySelector('.width')
-        const maxBox = document.querySelector('.max-width')
-        const minBox = document.querySelector('.min-width')
+        // const Width = document.querySelector('.curren-width')
+        // const maxWidth = document.querySelector('.current-max-width')
+        // const minWidth = document.querySelector('.current-min-width')
+        // const box = document.querySelector('.width')
+        // const maxBox = document.querySelector('.max-width')
+        // const minBox = document.querySelector('.min-width')
 
-        window.addEventListener('resize', function(){
-            let current = box.offsetWidth;
-            Width.textContent = `${current} px`;
-        })
+        // window.addEventListener('resize', function(){
+        //     let current = box.offsetWidth;
+        //     Width.textContent = `${current} px`;
+        // })
 
 
-        window.addEventListener('resize', function(){
-            let currentMax = maxBox.offsetWidth;
-            maxWidth.textContent = `${currentMax} px`;
-        })
+        // window.addEventListener('resize', function(){
+        //     let currentMax = maxBox.offsetWidth;
+        //     maxWidth.textContent = `${currentMax} px`;
+        // })
         
 
-        window.addEventListener('resize', function(){
-            let currentMin = minBox.offsetWidth;
-            minWidth.textContent = `${currentMin} px`;
-        })
+        // window.addEventListener('resize', function(){
+        //     let currentMin = minBox.offsetWidth;
+        //     minWidth.textContent = `${currentMin} px`;
+        // })
 
 
         // 여기서 문제 어떻게 foreach를 사용하는지?
 
-        // const currentWidth = document.querySelectorAll('span');
-        // const box = document.querySelectorAll('div')
+        // const Width = document.querySelectorAll('span');
+        const box = document.querySelectorAll('div')
+
+        box.forEach((item) => {
+            window.addEventListener('resize', () => {
+                let current = item.offsetWidth;
+                let width = item.previousElementSibling.childNodes[1];
+                // 위에 querySelector에서는 textContent는 잘먹었지만 .childNodes 에서는 유ㅏ배열 객체로 넘어와서 인덱스로 해당 span을 선택해서 편집해줘야한다.
+                width.textContent = `${current} px`;
+
+            })
+        })
         
-
-
-
 
 
     </script>

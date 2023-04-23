@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+    <style>
+
+        input,
+        #todo_save {
+            width: 500px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        #initial-text {
+            text-align: center;
+            color:rgb(139, 139, 139)
+        }
+    
+
+        #todo_content {
+            height: 100px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <form>
+        <input id="todo_title" type="text" placeholder="제목을 입력해주세요">
+        <input id="todo_content" type="textarea" placeholder="내용을 입력해주세요">
+        <button id="todo_save" type="submit">저장</button>
+    </form>
+
+    <p id="initial-text">아직 저장된 메모가 존재하지 않습니다.</p>
+    <ul id="todo_list"></ul>
+    
+    <script src="./memo.js"></script>
+  </body>
+</html>
