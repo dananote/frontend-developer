@@ -1,7 +1,7 @@
 //todo 구현해야할 기능
 // 1. 입력할 수 있는 기능
-//*   1-1 제목과 콘텐츠의 글자수 제한
-//*  1-2 둘중 하나라도 입력을 안했을시 alert 을 띄우고 싶다.
+//*  1-1 제목과 콘텐츠의 글자수 제한
+//*  1-2 둘중 하나라도 입력을 안했을시 alert 을 띄움
 // 2. 저장을 누를수 있는 기능
 //   2-1 '현재 입력된 todo가 없습니다' 텍스트 사라짐
 //   2-2 저장한 값을 화면에 불러옴
@@ -46,17 +46,18 @@ submitBtn.addEventListener('click',(event) => {
         inputTitle.value = ""
         inputContent.value = ""
 
-        console.log(todoList.childElementCount)
 
         // 삭제 이벤트 추가
         delBtn.addEventListener('click', () => {
             delBtn.parentElement.remove();
 
+            // 만약 uldm
             if(todoList.childElementCount === 0){
                 initialText.style.display = "block"
             }
-        })
+        }) 
         
-    }
+    } 
 })
+
 
