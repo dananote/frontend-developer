@@ -14,6 +14,7 @@ let date = year.concat('/', month,'/',day,' ', hour,':', minute, ':',second)
 
 
 //todo 별찍기
+//? 답을 봐도 이해가 안갔던...
 
 
 //todo  for를 이용한 기본 활용
@@ -72,7 +73,7 @@ function Random(food){
       console.log(this.name[parseInt(Math.random() * food.length)])
     }
   }
-  
+
     let foods = new Random(['짜장면','깐풍기','탕수육'])
   
   foods.finger()
