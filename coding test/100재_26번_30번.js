@@ -7,7 +7,11 @@ const planetK = ['수성', '금성', '지구', '화성', '목성', '토성', '�
 
 function solution (user){
     let index = planetK.indexOf(user);
-    return planetE[index];
+    if(index === -1){
+        console.log('태양계의 행성이 아닙니다')
+    } else {
+        return planetE[index];
+    }
 }
 
 
@@ -66,7 +70,7 @@ for(let i = 0; i < str.length; i++){
 }
 
 //* +) 문자의 길이만큼 반환하면 undefined 가 나오므로 처음부터 길이에서 -1 만큼만 반복되게 해주는 방법도 있음
-for(let i = 0; i < str.length; i++){
+for(let i = 0; i < str.length - 1; i++){
     console.log(str[i], str[i + 1])
 }
 
@@ -81,6 +85,12 @@ if(str === str.toUpperCase()){
     console.log('NO')
 }
 
+// [ 자바스크립트 아스키코드 ]
+// - 대문자 A~Z : 65~90
+// - 소문자 a~z : 97~122
+// - 문자열.charCodeAt(index) : 문자열에서 index번째 문자의 아스키코드 값을 반환. 한 글자인 경우 index값 입력 안해도 됨
+// - String.fromCharCode(아스키코드값) : 아스키코드 값에 해당하는 문자를 반환함
+
 
 
 //todo 30번 문자열 속 문자 찾기
@@ -89,3 +99,18 @@ let str = prompt('문자를 입력해주세요')
 let find = prompt('찾을 문자를 입력해주세요')
 
 str.indexOf(find);
+
+
+//* +) 2중 for문
+for(let i=0; i<str.length;i++){
+    if(str[i]===findStr[0]){
+        checkStr += str[i];
+        for(let j = 1; j < findStr.length; j++){
+            checkStr += str[i+j];
+        }
+        if(checkStr === findStr) {
+            console.log(i);
+            checkStr = "";
+        }
+    }
+}
