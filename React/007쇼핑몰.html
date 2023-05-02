@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>위니브 샵</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        let x = 0;
+
+        const domContainer = document.querySelector('#root');
+        const root = ReactDOM.createRoot(domContainer);
+
+        //* 함수는 실행하라고 있는거다 실행안한사람: 노태희 
+        async function fetchData() {
+            try {
+            const response = await fetch('http://test.api.weniv.co.kr/mall');
+            const jsonData = await response.json();
+
+            root.render(<Card dataList = { jsonData }/>)
+
+            // jsonData.forEach((el) => {root.render(<Card dataList = {el}/>)})
+
+            } catch (error) {
+            console.log(error);
+            }
+        }
+
+
+        function Card(props) {
+            return (
+                    props.dataList.map(item =>
+                    <div key = {x++}>
+                    <img src={`http://test.api.weniv.co.kr/${item.thumbnailImg}`}/>
+                    <h2>{item.productName}</h2>
+                    <p>{item.price}</p>
+                    </div>
+                    )
+                )
+            }
+
+        // function Card(props) {
+        //     return(
+        //         <p>{props.dataList.productName}</p>
+        //     )
+        // }
+
+
+        fetchData()
+
+    </script>
+</body>
+
+</html>
