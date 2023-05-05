@@ -1,0 +1,13 @@
+
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+.menu {
+    background-color: salmon;
+    width: 500px;
+    height: 200px;
+}

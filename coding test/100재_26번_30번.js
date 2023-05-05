@@ -85,11 +85,19 @@ if(str === str.toUpperCase()){
     console.log('NO')
 }
 
+//* 아스키코드 활용
+
 // [ 자바스크립트 아스키코드 ]
 // - 대문자 A~Z : 65~90
 // - 소문자 a~z : 97~122
 // - 문자열.charCodeAt(index) : 문자열에서 index번째 문자의 아스키코드 값을 반환. 한 글자인 경우 index값 입력 안해도 됨
 // - String.fromCharCode(아스키코드값) : 아스키코드 값에 해당하는 문자를 반환함
+
+if(n.charCodeAt() >= 65 && n.charCodeAt() <= 90){
+    console.log('YES')
+} else {
+    console.log('NO')
+}
 
 
 
@@ -101,7 +109,27 @@ let find = prompt('찾을 문자를 입력해주세요')
 str.indexOf(find);
 
 
-//* +) 2중 for문
+//! +) 2중 for문
+// 음.. 만약 예시가
+// str = 'appineapple is yummy'
+// find = 'apple' 
+// 이러면 반환이 안됨
+
+for(let i=0; i<str.length;i++){
+    if(str[i]===findStr[0]){
+        checkStr += str[i];
+        for(let j = 1; j < findStr.length; j++){
+            checkStr += str[i+j];
+        }
+        if(checkStr === findStr) { // 애초에 이게 안맞으면 여기에 안들어가서 초기화가 안됨
+            console.log(i);
+            checkStr = "";
+        }
+        console.log(checkStr) //'appin' 'appinapple'
+    }
+}
+
+//* 초기화가 제대로 되지 않음
 for(let i=0; i<str.length;i++){
     if(str[i]===findStr[0]){
         checkStr += str[i];
@@ -109,8 +137,9 @@ for(let i=0; i<str.length;i++){
             checkStr += str[i+j];
         }
         if(checkStr === findStr) {
-            console.log(i);
-            checkStr = "";
+            console.log(i); // 6
         }
+    checkStr = "";
+    console.log(checkStr) // ''
     }
 }
