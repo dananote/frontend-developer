@@ -1,0 +1,245 @@
+/* font */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    src: url(./font/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    font-weight: 800;
+    src: url(./font/Pretendard-Bold.woff) format('woff');
+}
+
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    all: unset;
+}
+
+
+body {
+    background:linear-gradient(45deg, #F0F4FF,#A5B6EE );
+    font-family: 'Pretendard-Bold';
+}
+
+.wrap {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    width: 244px;
+}
+
+.timer {
+    width: 400px;
+    padding: 48px 58px 40px 58px;
+    margin-top: 60px; 
+    border-radius: 16px;
+    box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+    background: linear-gradient(140deg, #5572BB, #374B7C);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.timer-title {
+    color: white;
+    font-size: 24px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #5B75B4;
+    background-color: #3D538A;
+    margin: 24px 0 32px 0;
+}
+
+.wrap-count {
+    display: flex;
+    justify-content: space-around;
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+
+.wrap-count div h3 {
+    text-align: center;
+    color: #A5B6EE;
+    font-size: 12px;
+}
+
+[class^='count']{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #354971;
+    border-radius: 4px;
+    background: linear-gradient(-45deg, #304577, #4C65A0);
+    box-sizing: border-box;
+    margin-top: 4px;
+    position: relative;
+}
+
+.min {
+    position: relative;
+}
+
+.min::after {
+    content:'';
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: -14px;
+    width: 6px;
+    height: 26px;
+    background-image: url('./images/dot.svg');
+}
+
+.min::before {
+    content:'';
+    display: block;
+    position: absolute;
+    top: 44px;
+    right: -14px;
+    width: 6px;
+    height: 26px;
+    background-image: url('./images/dot.svg');
+}
+
+
+
+[class^='count'] p {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    transform: translateY(16px);
+    z-index: 99999;
+}
+
+
+[class^='count']::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 1px;
+    background-color: #354971;
+    position: absolute;
+    clear:both;
+    top: 40px;
+}
+
+[class^='count']::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 1px;
+    background-color: #354971;
+    position: absolute;
+    clear:both;
+    top: 40px;
+    right: 0;
+}
+
+.button-wrap {
+    display: flex;
+    gap: 12px;
+}
+
+.button-wrap button {
+    width: 112px;
+    height: 48px;
+    text-align: center;
+    color:white;
+    font-size: 14px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.start-btn {
+    background-color: #5180FF;
+}
+
+.reset-btn {
+    background-color: #FB7099;
+}
+
+.start-btn::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('./images/icon-start.svg');
+    margin-right: 6px;
+}
+
+.reset-btn::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('./images/icon-reset.svg');
+    margin-right: 6px;
+}
+
+.start-btn:disabled {
+    background-color: #324577;
+    color: #617199;
+}
+
+.start-btn:disabled::before {
+    background-image: url('./images/icon-start-disabled.svg');
+}
+
+.reset-btn:disabled {
+    background-color: #324577;
+    color: #617199;
+}
+
+.reset-btn:disabled::before {
+    background-image: url('./images/icon-reset-disabled.svg');
+}
+
+.pause-btn {
+    background-color: #15C2B8;
+    display: none;
+}
+
+.pause-btn::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('./images/icon-stop.svg');
+    margin-right: 6px;
+}
+
+
+
+
+
+
+footer {
+    color: #8596BF;
+    font-size: 14px;
+    margin-top: 60px;
+    font-family: 'Pretendard-Regular';
+}
